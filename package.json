@@ -1,0 +1,31 @@
+{
+  "name": "wepla-common",
+  "version": "0.1.0",
+  "description": "Common components for node.js be used in our projects",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha $(find ./test -name '*.spec.js') --recursive -w"
+  },
+  "author": {
+    "name": "Chris",
+    "email": "6pack@wepla.net",
+    "url": "http://whatilearn.com/"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  },
+  "keywords": [
+    "weplanet"
+  ],
+  "dependencies": {
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^7.1.1"
+  }
+}
