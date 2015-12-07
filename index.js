@@ -1,20 +1,13 @@
 var morgan = require('morgan');
 
 
-exports.hello = function () {
-  console.log('hello');
-};
-
-
 /**
  * morgan wrapper
- * @param app
+ * @returns {morgan}
  */
-exports.logger = function setLogger(app) {
-
+exports.logger = function setLogger() {
   // http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
-  var env = app.get('env'),
-      red = '\x1B[31m',
+  var red = '\x1B[31m',
       green = '\x1B[32m',
       yellow = '\x1B[33m',
       cyan = '\x1B[36m',
@@ -52,6 +45,6 @@ exports.logger = function setLogger(app) {
     return white + 'body: ' + JSON.stringify(req.body) + endColor;
   });
 
-  app.use(morgan(':method :url :status :response-time ms :body'));
-  //app.use(morgan('dev'));
+  //app.use(morgan(':method :url :status :response-time ms :body'));
+  return morgan(':method :url :status :response-time ms :body');
 };

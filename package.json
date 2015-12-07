@@ -1,6 +1,6 @@
 {
   "name": "wepla-common",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Common components for node.js be used in our projects",
   "main": "index.js",
   "directories": {
@@ -21,6 +21,10 @@
   "keywords": [
     "weplanet"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WePlanet/wepla-common.git"
+  },
   "dependencies": {
     "morgan": "^1.6.1"
   },

@@ -10,8 +10,8 @@ var express = require('express'),
 app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-weplaCommon.logger(app);
+app.use(weplaCommon.logger());
+//weplaCommon.logger(app);
 
 server = http.createServer(app);
 server.listen(PORT, function () {
